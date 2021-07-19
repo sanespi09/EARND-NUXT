@@ -1,0 +1,19 @@
+<template>
+  <div>
+    <div>Bienvenido a sus finanzas</div>
+    <nuxt />
+  </div>
+</template>
+
+<script>
+import appHeader from '@/components/header'
+export default {
+  components: { appHeader }
+}
+</script>
+
+<style>
+body {
+  margin: 0 !important;
+}
+</style>
