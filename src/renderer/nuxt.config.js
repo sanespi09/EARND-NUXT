@@ -7,22 +7,15 @@
 module.exports = {
   ssr: false,
   target: 'static',
+  css: ['@/assets/css/tailwind.css'],
   head: {
-    title: 'earn',
+    title: 'earnd',
     meta: [{ charset: 'utf-8' }]
   },
   loading: false,
-  plugins: [
-    { ssr: true, src: '@/plugins/icons.js' }
-
-  ],
-  buildModules: [
-    '@nuxt/typescript-build',
-    '@nuxtjs/tailwindcss'
-  ],
-  modules: [
-    '@nuxtjs/vuetify'
-  ],
+  plugins: [{ ssr: true, src: '@/plugins/icons.js' }],
+  buildModules: ['@nuxt/typescript-build', '@nuxtjs/tailwindcss'],
+  modules: ['@nuxtjs/vuetify'],
   vuetify: {
     theme: {
       themes: {

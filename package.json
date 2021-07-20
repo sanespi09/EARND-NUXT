@@ -1,5 +1,5 @@
 {
-  "name": "earn",
+  "name": "EARND",
   "version": "0.0.1",
   "description": "Personal finance manager",
   "main": "./dist/main/index.js",
@@ -57,5 +57,8 @@
     "vuetify": "2.5.1",
     "webpack": "4.44.2",
     "webpack-node-externals": "2.5.2"
+  },
+  "dependencies": {
+    "nanoid": "^3.1.23"
   }
 }
