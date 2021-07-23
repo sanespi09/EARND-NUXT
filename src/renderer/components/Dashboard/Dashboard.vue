@@ -20,7 +20,7 @@
       </keep-alive>
     </div>
     <div class="flex flex-none justify-end relative bottom-4">
-      <AddButton />
+      <AddButton @add-click="toggleAddModal" />
     </div>
   </div>
 </template>
@@ -44,6 +44,9 @@ export default {
   methods: {
     onTabChange(tab) {
       this.selectedTab = tab;
+    },
+    toggleAddModal() {
+      this.$store.commit("ui/toggleModal");
     }
   }
 };

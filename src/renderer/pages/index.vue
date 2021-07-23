@@ -3,16 +3,21 @@
     <div class="mt-20">
       <Dashboard :user="user" />
     </div>
+    <Modal :showModal="showModal">
+      Dummy
+    </Modal>
   </main>
 </template>
 
 <script>
 import { remote } from "electron";
 import Dashboard from "../components/Dashboard/Dashboard";
+import Modal from "../Components/Modal/Modal";
 
 export default {
   components: {
-    Dashboard
+    Dashboard,
+    Modal
   },
   data() {
     return {
@@ -23,7 +28,11 @@ export default {
       }
     };
   },
-  methods: {}
+  computed: {
+    showModal: function() {
+      return this.$store.state.ui.showModal;
+    }
+  }
 };
 </script>
 

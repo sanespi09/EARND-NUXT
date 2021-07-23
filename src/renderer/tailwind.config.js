@@ -2,10 +2,19 @@ module.exports = {
   purge: [],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extends: {
+    extend: {
       colors: {
         gray: {
-          DEFAULT: '#504f4f'
+          DEFAULT: "#504f4f"
+        }
+      },
+      animation: {
+        fade: "fadeIn .2s ease-in-out forwards"
+      },
+      keyframes: {
+        fadeIn: {
+          from: { opacity: 0 },
+          to: { opacity: 1 }
         }
       }
     }
@@ -14,4 +23,4 @@ module.exports = {
     extend: {}
   },
   plugins: []
-}
+};

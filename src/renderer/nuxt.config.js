@@ -6,26 +6,26 @@
 
 module.exports = {
   ssr: false,
-  target: 'static',
-  css: ['@/assets/css/tailwind.css'],
+  target: "static",
+  css: ["@/assets/css/tailwind.css"],
   head: {
-    title: 'earnd',
-    meta: [{ charset: 'utf-8' }]
+    title: "earnd",
+    meta: [{ charset: "utf-8" }]
   },
   loading: false,
-  plugins: [{ ssr: true, src: '@/plugins/icons.js' }],
-  buildModules: ['@nuxt/typescript-build', '@nuxtjs/tailwindcss'],
-  modules: ['@nuxtjs/vuetify'],
+  plugins: [{ ssr: true, src: "@/plugins/icons.js" }],
+  buildModules: ["@nuxt/typescript-build", "@nuxtjs/tailwindcss"],
+  modules: ["@nuxtjs/vuetify"],
   vuetify: {
     theme: {
       themes: {
         light: {
-          primary: '#1867c0',
-          secondary: '#b0bec5',
-          accent: '#8c9eff',
-          error: '#b71c1c'
+          primary: "#1867c0",
+          secondary: "#b0bec5",
+          accent: "#8c9eff",
+          error: "#b71c1c"
         }
       }
     }
   }
-}
+};
