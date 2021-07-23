@@ -19,6 +19,9 @@
         <component :is="selectedTab" :props="user" />
       </keep-alive>
     </div>
+    <div class="flex flex-none justify-end relative bottom-4">
+      <AddButton />
+    </div>
   </div>
 </template>
 
@@ -26,9 +29,10 @@
 import Tab from "./Tab.vue";
 import IncomeView from "../Income/IncomeView.vue";
 import OutcomeView from "../Outcome/OutcomeView.vue";
+import AddButton from "./AddButton.vue";
 
 export default {
-  components: { Tab, IncomeView, OutcomeView },
+  components: { Tab, IncomeView, OutcomeView, AddButton },
   props: {
     user: Object
   },
