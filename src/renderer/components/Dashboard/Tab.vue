@@ -15,18 +15,18 @@ export default {
     text: String,
     isPressed: Boolean
   },
-  data() {
-    return {};
+  data () {
+    return {}
   },
   computed: {
-    style() {
-      console.log(this.state);
+    style () {
+      console.log(this.state)
       return {
-        "bg-gray-600": this.isPressed,
-        "hover:bg-gray-700": !this.isPressed,
-        "bg-gray-900": !this.isPressed
-      };
+        'bg-gray-600': this.isPressed,
+        'hover:bg-gray-700': !this.isPressed,
+        'bg-gray-900': !this.isPressed
+      }
     }
   }
-};
+}
 </script>

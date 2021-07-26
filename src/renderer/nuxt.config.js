@@ -15,7 +15,7 @@ module.exports = {
   loading: false,
   plugins: [{ ssr: true, src: "@/plugins/icons.js" }],
   buildModules: ["@nuxt/typescript-build", "@nuxtjs/tailwindcss"],
-  modules: ["@nuxtjs/vuetify"],
+  modules: ["@nuxtjs/vuetify", "portal-vue/nuxt"],
   vuetify: {
     theme: {
       themes: {

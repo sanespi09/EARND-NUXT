@@ -59,6 +59,7 @@
     "webpack-node-externals": "2.5.2"
   },
   "dependencies": {
-    "nanoid": "^3.1.23"
+    "nanoid": "^3.1.23",
+    "portal-vue": "^2.1.7"
   }
 }

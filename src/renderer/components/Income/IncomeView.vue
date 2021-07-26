@@ -5,14 +5,14 @@
 </template>
 
 <script>
-import IncomeItem from "./IncomeItem.vue";
+import IncomeItem from './IncomeItem.vue'
 
 export default {
   components: { IncomeItem },
   computed: {
-    incomes() {
-      return this.$store.state.incomes;
+    incomes () {
+      return this.$store.state.incomes
     }
   }
-};
+}
 </script>

@@ -9,14 +9,14 @@
 </template>
 
 <script>
-import OutcomeItem from "./OutcomeItem.vue";
+import OutcomeItem from './OutcomeItem.vue'
 
 export default {
   components: { OutcomeItem },
   computed: {
-    outcomes() {
-      return this.$store.state.outcomes;
+    outcomes () {
+      return this.$store.state.outcomes
     }
   }
-};
+}
 </script>

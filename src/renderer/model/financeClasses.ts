@@ -1,5 +1,13 @@
 import { nanoid } from "nanoid";
 
+export interface FinanceType {
+  id: string;
+  title: string;
+  amount: number;
+  category: string;
+  date: string;
+}
+
 export class Income implements FinanceType {
   id: string = nanoid();
   title: string;
@@ -28,12 +36,4 @@ export class Outcome implements FinanceType {
     this.category = category;
     this.date = date;
   }
-}
-
-export interface FinanceType {
-  id: string;
-  title: string;
-  amount: number;
-  category: string;
-  date: string;
 }

@@ -1,15 +1,16 @@
 module.exports = {
-  purge: [],
+  purge: ['./**/*.vue'],
+  mode: 'jit',
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
       colors: {
         gray: {
-          DEFAULT: "#504f4f"
+          DEFAULT: '#504f4f'
         }
       },
       animation: {
-        fade: "fadeIn .2s ease-in-out forwards"
+        fade: 'fadeIn .2s ease-in-out forwards'
       },
       keyframes: {
         fadeIn: {
@@ -20,7 +21,9 @@ module.exports = {
     }
   },
   variants: {
-    extend: {}
+    extend: {
+      transform: ['active']
+    }
   },
   plugins: []
-};
+}

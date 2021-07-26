@@ -5,12 +5,12 @@
   >
     <div
       class="relative plus-sign border-b-4 bottom-1/2 border-white-300 w-4 h-4 transition-transform transform"
-    ></div>
+    />
   </div>
 </template>
 
 <script>
-export default {};
+export default {}
 </script>
 
 <style scoped>

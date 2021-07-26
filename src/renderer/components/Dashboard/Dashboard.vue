@@ -22,23 +22,28 @@
     <div class="flex flex-none justify-end relative bottom-4">
       <AddButton @add-click="toggleAddModal" />
     </div>
+    <Portal v-if="onAdd" to="modal-content">
+      <AddItem />
+    </Portal>
   </div>
 </template>
 
 <script>
-import Tab from "./Tab.vue";
 import IncomeView from "../Income/IncomeView.vue";
 import OutcomeView from "../Outcome/OutcomeView.vue";
+import Tab from "./Tab.vue";
 import AddButton from "./AddButton.vue";
+import AddItem from "../Form/AddItem.vue";
 
 export default {
-  components: { Tab, IncomeView, OutcomeView, AddButton },
+  components: { Tab, IncomeView, OutcomeView, AddButton, AddItem },
   props: {
     user: Object
   },
   data() {
     return {
-      selectedTab: "IncomeView"
+      selectedTab: "IncomeView",
+      onAdd: false
     };
   },
   methods: {
@@ -46,6 +51,7 @@ export default {
       this.selectedTab = tab;
     },
     toggleAddModal() {
+      this.onAdd = true;
       this.$store.commit("ui/toggleModal");
     }
   }

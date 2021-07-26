@@ -3,9 +3,7 @@
     <div class="mt-20">
       <Dashboard :user="user" />
     </div>
-    <Modal :showModal="showModal">
-      Dummy
-    </Modal>
+    <Modal :show-modal="showModal" />
   </main>
 </template>
 
@@ -29,7 +27,7 @@ export default {
     };
   },
   computed: {
-    showModal: function() {
+    showModal() {
       return this.$store.state.ui.showModal;
     }
   }

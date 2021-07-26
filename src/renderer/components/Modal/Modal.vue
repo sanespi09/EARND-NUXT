@@ -1,13 +1,14 @@
 <template>
   <div
-    class="animate-fade flex items-center justify-center fixed top-0 left-0 w-screen h-screen bg-gray-900 bg-opacity-25"
+    class="animate-fade flex items-center justify-center fixed top-0 left-0 w-screen h-screen "
     v-if="showModal"
-    @click="closeModal"
   >
-    <div class="flex-none w-1/3 bg-blue-200 p-4 rounded-lg">
-      <div>
-        <slot></slot>
-      </div>
+    <div
+      class="absolute w-full h-full z-5 bg-gray-900 bg-opacity-25"
+      @click="closeModal"
+    ></div>
+    <div class="absolute z-10 flex-none bg-blue-200 p-8 rounded-lg">
+      <PortalTarget name="modal-content"></PortalTarget>
     </div>
   </div>
 </template>
@@ -19,6 +20,7 @@ export default {
   },
   methods: {
     closeModal(e) {
+      console.log(e.currentTarget);
       this.$store.commit("ui/toggleModal");
     }
   }
